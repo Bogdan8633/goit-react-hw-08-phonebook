@@ -13,6 +13,8 @@ const RegisterForm = ({ onSubmit }) => {
     onSubmit,
   });
 
+  console.log(state); //це треба буде прибрати !!!!
+
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
       <TextField handleChange={handleChange} {...fields.name} />
