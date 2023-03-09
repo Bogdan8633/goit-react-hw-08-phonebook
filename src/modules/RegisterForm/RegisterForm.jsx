@@ -14,13 +14,18 @@ const RegisterForm = ({ onSubmit }) => {
     onSubmit,
   });
 
+  const { name, email, password } = state;
   console.log(state); //це треба буде прибрати !!!!
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
-      <TextField handleChange={handleChange} {...fields.name} />
-      <TextField handleChange={handleChange} {...fields.email} />
-      <TextField handleChange={handleChange} {...fields.password} />
+      <TextField value={name} handleChange={handleChange} {...fields.name} />
+      <TextField value={email} handleChange={handleChange} {...fields.email} />
+      <TextField
+        value={password}
+        handleChange={handleChange}
+        {...fields.password}
+      />
       <Button>Register</Button>
     </form>
   );
