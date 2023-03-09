@@ -6,6 +6,8 @@ import useForm from 'shared/hooks/useForm';
 import fields from './fields';
 import initialState from './initialState';
 
+import PropTypes from 'prop-types';
+
 import styles from './registerForm.module.css';
 
 const RegisterForm = ({ onSubmit }) => {
@@ -15,7 +17,6 @@ const RegisterForm = ({ onSubmit }) => {
   });
 
   const { name, email, password } = state;
-  console.log(state); //це треба буде прибрати !!!!
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
@@ -32,3 +33,7 @@ const RegisterForm = ({ onSubmit }) => {
 };
 
 export default RegisterForm;
+
+RegisterForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
