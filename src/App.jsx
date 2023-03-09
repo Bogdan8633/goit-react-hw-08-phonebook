@@ -1,16 +1,22 @@
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+
+import Navbar from 'modules/Navbar/Navbar';
+import UserRoutes from 'UserRoutes';
 
 import { store } from './redux/store';
 
-import MyContactsPage from './pages/MyContactsPage/MyContactsPage';
 import styles from './app.module.css';
 
 function App() {
   return (
     <Provider store={store}>
-      <div className={styles.totalContainer}>
-        <MyContactsPage />
-      </div>
+      <BrowserRouter>
+        <div className={styles.totalContainer}>
+          <Navbar />
+          <UserRoutes />
+        </div>
+      </BrowserRouter>
     </Provider>
   );
 }

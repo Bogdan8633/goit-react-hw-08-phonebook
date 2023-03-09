@@ -8,11 +8,11 @@ import styles from './navbar.module.css';
 const Navbar = () => {
   return (
     <div className={styles.navbar}>
-      <link to="/">Logo</link>
+      <Link to="/">Logo</Link>
       <NavbarMenu />
       <NavbarAuth />
     </div>
   );
 };
 
-export default NavbarMenu;
+export default Navbar;
