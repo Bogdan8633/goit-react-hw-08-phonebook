@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
-import { signup } from 'redux/auth/auth-operations';
+import { login } from 'redux/auth/auth-operations';
 import { isUserLogin } from 'redux/auth/auth-selectors';
 
 import LoginForm from 'modules/LoginForm/LoginForm';
@@ -9,8 +9,9 @@ import LoginForm from 'modules/LoginForm/LoginForm';
 const LoginPage = () => {
   const isLogin = useSelector(isUserLogin);
   const dispatch = useDispatch();
-  const handleSignup = data => {
-    dispatch(signup(data));
+
+  const handleLogin = data => {
+    dispatch(login(data));
   };
 
   if (isLogin) {
@@ -20,7 +21,7 @@ const LoginPage = () => {
   return (
     <div>
       <h2>Login Page</h2>
-      <LoginForm onSubmit={handleSignup} />
+      <LoginForm onSubmit={handleLogin} />
     </div>
   );
 };

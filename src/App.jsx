@@ -11,7 +11,7 @@ import styles from './app.module.css';
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/goit-react-hw-08-phonebook">
         <div className={styles.totalContainer}>
           <Navbar />
           <UserRoutes />
