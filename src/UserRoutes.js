@@ -6,6 +6,7 @@ const RegisterPage = lazy(() => import('./pages/RegisterPage/RegisterPage'));
 const MyContactsPage = lazy(() =>
   import('./pages/MyContactsPage/MyContactsPage')
 );
+const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
 
 const UserRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const UserRoutes = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/my-contacts" element={<MyContactsPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </Suspense>
   );
