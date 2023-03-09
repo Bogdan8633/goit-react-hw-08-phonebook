@@ -19,7 +19,7 @@ const RegisterPage = () => {
 
   return (
     <div>
-      <h2>Register Page</h2>
+      <h2>Create a new profile to use our service</h2>
       <RegisterForm onSubmit={handleSignup} />
     </div>
   );

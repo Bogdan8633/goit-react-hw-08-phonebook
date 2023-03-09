@@ -1,7 +1,19 @@
-.title {
+.titleLoggedIn {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 100px;
-  color: fuchsia;
+  color: orangered;
+}
+
+.titleNotLoggedIn {
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  color: black;
+}
+
+.span {
+  display: inline;
+  color: orangered;
 }

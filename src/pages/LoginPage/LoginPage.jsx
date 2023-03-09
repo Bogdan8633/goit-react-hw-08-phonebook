@@ -20,7 +20,7 @@ const LoginPage = () => {
 
   return (
     <div>
-      <h2>Login Page</h2>
+      <h2>If you already have a previously created profile, log in using it</h2>
       <LoginForm onSubmit={handleLogin} />
     </div>
   );

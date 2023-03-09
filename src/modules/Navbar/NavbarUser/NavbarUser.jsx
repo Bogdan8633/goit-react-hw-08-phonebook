@@ -6,11 +6,11 @@ import { useSelector } from 'react-redux';
 import { getUser } from 'redux/auth/auth-selectors';
 
 const NavbarUser = () => {
-  const { name } = useSelector(getUser);
+  const { email } = useSelector(getUser);
 
   return (
     <div>
-      <span className={styles.userName}>{name}</span>
+      <span className={styles.userName}>{email}</span>
       <Button>Logout</Button>
     </div>
   );

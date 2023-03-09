@@ -1,0 +1,4 @@
+[
+  { "id": "1", "text": "Home page", "link": "/" },
+  { "id": "2", "text": "Contacts page", "link": "/my-contacts" }
+]
