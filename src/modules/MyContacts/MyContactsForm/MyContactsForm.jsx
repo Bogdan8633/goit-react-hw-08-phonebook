@@ -23,7 +23,7 @@ const MyContactsForm = () => {
     });
   };
 
-  const handleAddContact = ({ name, phone }) => {
+  const handleAddContact = ({ name, number }) => {
     const normalaizedName = name.toLowerCase();
 
     if (
@@ -35,7 +35,7 @@ const MyContactsForm = () => {
       return false;
     }
 
-    dispatch(addContact({ name, phone }));
+    dispatch(addContact({ name, number }));
   };
 
   const handleSubmit = e => {
@@ -44,7 +44,7 @@ const MyContactsForm = () => {
     setState({ ...initialState });
   };
 
-  const { name, phone } = state;
+  const { name, number } = state;
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
       <input
@@ -57,10 +57,10 @@ const MyContactsForm = () => {
         required
       />
       <input
-        value={phone}
+        value={number}
         onChange={handleChange}
         type="tel"
-        name="phone"
+        name="number"
         pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         required
