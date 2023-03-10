@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from './button.module.css';
 
 const Button = ({ onClick, children, type = 'submit' }) => {
@@ -9,3 +11,8 @@ const Button = ({ onClick, children, type = 'submit' }) => {
 };
 
 export default Button;
+
+Button.propTypes = {
+  onClick: PropTypes.func,
+  type: PropTypes.string,
+};

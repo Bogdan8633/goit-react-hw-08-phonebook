@@ -1,4 +1,9 @@
 [
-  { "id": "1", "text": "Home page", "link": "/" },
-  { "id": "2", "text": "Contacts page", "link": "/my-contacts" }
+  { "id": "1", "text": "Home page", "link": "/", "private": false },
+  {
+    "id": "2",
+    "text": "Contacts page",
+    "link": "/my-contacts",
+    "private": true
+  }
 ]

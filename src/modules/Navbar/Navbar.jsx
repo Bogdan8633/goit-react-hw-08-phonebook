@@ -12,8 +12,9 @@ import styles from './navbar.module.css';
 
 const Navbar = () => {
   const isLogin = useSelector(isUserLogin);
+  const filteredItems = !isLogin ? items.filter(item => !item.private) : items;
 
-  const elements = items.map(({ id, link, text }) => {
+  const elements = filteredItems.map(({ id, link, text }) => {
     return (
       <li key={id}>
         <NavLink to={link} className={styles.link}>
