@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import NavbarAuth from './NavbarAuth/NavbarAuth.jsx';
-import NavbarUser from './NavbarUser/NavbarUser';
+import UserMenu from './UserMenu/UserMenu';
 
 import items from './menuItems';
 
@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <ul className={styles.menu}>{elements}</ul>
-      {!isLogin ? <NavbarAuth /> : <NavbarUser />}
+      {!isLogin ? <NavbarAuth /> : <UserMenu />}
     </div>
   );
 };

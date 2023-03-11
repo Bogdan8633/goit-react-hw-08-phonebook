@@ -21,7 +21,7 @@ const UserRoutes = () => {
           <Route path="/login" element={<LoginPage />} />
         </Route>
         <Route element={<PrivateRoute />}>
-          <Route path="/my-contacts" element={<MyContactsPage />} />
+          <Route path="/contacts" element={<MyContactsPage />} />
         </Route>
       </Routes>
     </Suspense>
